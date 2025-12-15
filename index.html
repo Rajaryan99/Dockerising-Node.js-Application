@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+
+    #formBtn{
+        color: white;
+        background-color: cornflowerblue;
+        border: none;
+        border-radius: 2px;
+        padding: 0.25rem 1rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    form {
+        border: 2ps solid gray;
+        display: inline-block;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        text-align: left;
+    }
+
+    .field {
+        margin-bottom: 0.5rem;
+    }
+</style>
+<body>
+    <h1>Hi User, Welcome to our App!!</h1>
+    <p>You can sign up to the platform to access all important notification.</p>
+
+    <form action="/addUser" method="POST" target="_blank" id="signupFrom">
+        <div class="field">
+            <label for="email">Email: </label>
+            <input type="text" name="email" id="" placeholder="johndoe@gmail.com">
+        </div>
+        <div class="field">
+            <label for="username">Username: </label>
+            <input type="text" name="username" id="" placeholder="Jhon Doe">
+        </div>
+        <div class="field">
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="" placeholder="password">
+        </div>
+
+        <button id="formBtn">Sign up</button>
+    </form>
+
+    <script>
+        function resetFrom(){
+            let myFrom = document.getElementById("signupFrom");
+            myFrom.reset();
+            return false
+        }
+    </script>
+</body>
+</html>
